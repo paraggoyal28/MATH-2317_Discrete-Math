@@ -9,6 +9,8 @@
 Using terminal for finding the city name in the dictionary (or any other words):
 
         $ g++ stringDictionary.cpp
-        $ ./a.out > _nameOfTheTextFile.txt_
-        $ grep '_CITY-NAME_' _nameOfTheTextFile.txt_ 
+        $ ./a.out > nameOfTheTextFile.txt
+        $ grep 'CITY-NAME' nameOfTheTextFile.txt
 
+Here is the example testcase
+![Example](https://github.com/BedirT/MATH-2317_Discrete-Math/blob/master/Homework%201/Mississippi/img)
