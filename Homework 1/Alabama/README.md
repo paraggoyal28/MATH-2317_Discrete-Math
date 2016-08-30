@@ -5,4 +5,4 @@
 **Tips:** Should be in alphabetical order.
 
 Here is the example testcase
-![Example](https://github.com/BedirT/MATH-2317_Discrete-Math/blob/master/Homework%201/Alabama/img)
+![Example_Alabama](https://github.com/BedirT/MATH-2317_Discrete-Math/blob/master/Homework%201/Alabama/img.png)
