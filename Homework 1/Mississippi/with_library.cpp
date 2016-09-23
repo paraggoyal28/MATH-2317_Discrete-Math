@@ -8,14 +8,15 @@ map< string, int> checking;
 vector<string> vc;
 
 int main () {
-    string myints = "IIIIMPPSSSS";
+    string myStr;
+    cin >> myStr;
     
     do {
-        if (!checking[myints]){
-            checking[myints] = 1;
-            vc.pb(myints);
+        if (!checking[myStr]){
+            checking[myStr] = 1;
+            vc.pb(myStr);
         }
-    } while (next_permutation(myints.begin(), myints.end()));
+    } while (next_permutation(myStr.begin(), myStr.end()));
     
     sort(vc.begin(),vc.end());
     int count = 1;
