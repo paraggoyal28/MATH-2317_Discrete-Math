@@ -3,10 +3,9 @@
 #include <string>
 #define pb push_back
 using namespace std;
-
 string op3(string a, int b){
     string s = "";
-    if(b > 7)
+    if(b > 5)
         s += a + "^" + a + "^" + a + ".....(" + to_string(b) + " times)" + ".....^" + a;
     else{
         for (int i = 0 ; i < b-1 ; ++i)
@@ -18,7 +17,7 @@ string op3(string a, int b){
 
 string op4(string a, int b){
     string s = "";
-    if(b > 7)
+    if(b > 5)
         s += op3(a, stoi(a)) + "\n------\n...\n(" + to_string(b) + " times)\n...\n------\n" + op3(a, stoi(a));
     else{
         for(int i = 0; i < b-1; ++i)
@@ -30,7 +29,7 @@ string op4(string a, int b){
 
 string op5(string a, int b){
     string s = "";
-    if(b > 7)
+    if(b > 5)
         s += op4(a, stoi(a)) + "\n******************************************\n.\n.\n.\n(" + to_string(b) + " times)\n.\n.\n.\n******************************************\n" + op4(a, stoi(a));
     else{
         for(int i = 0; i < b-1; ++i)
@@ -48,12 +47,14 @@ int main (){
         cin >> s;
         svc.pb(s);
     }
-    for (int it = 0; it != svc.size() ; it+=2) {
-        int b = stoi(svc[it+1]);
-        if      (svc[it] == "op3"){ cout << op3(svc[it-1], b) << endl; }
-        else if (svc[it] == "op4"){ cout << op4(svc[it-1], b) << endl; }
-        else if (svc[it] == "op5"){ cout << op5(svc[it-1], b) << endl; }
-        else                      { cout << "Error: Invalid entry!" << endl; }
+    string str;
+    str = svc[0];
+    for (int it = 1; it < svc.size() ; it+=2) {
+        if (svc[it] == "op3"){ str = op3(str , stoi(svc[it+1])); }
+        else if (svc[it] == "op4"){ str = op4(str, stoi(svc[it+1])); }
+        else if (svc[it] == "op5"){ str = op5(str, stoi(svc[it+1])); }
+        else;
     }
+    cout << str << endl;
     
 }
