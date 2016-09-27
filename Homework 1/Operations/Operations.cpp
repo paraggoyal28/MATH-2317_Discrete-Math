@@ -27,20 +27,8 @@ string op5(string a, int b){
     return s;
 }
 
-string op6(string a, int b){
-    string s = "";
-    if(b > 5)
-        s += op5(a, stoi(a)) + "\n******************************************\n.\n.\n.\n(" + to_string(b) + " times)\n.\n.\n.\n******************************************\n" + op5(a, stoi(a));
-    else{
-        for(int i = 0; i < b-1; ++i)
-            s += op5(a, stoi(a)) + "\n******************************************\n";
-        s += op5(a, stoi(a));
-    }
-    return s;
-}
-
 int main (){
-    int b, c; // 5 op6 4 op6 3
+    int b, c;
     vector<string> svc;
     string s = "";
     while(s != "="){
@@ -52,7 +40,6 @@ int main (){
     for (int it = 1; it < svc.size() ; it+=2) {
         if (svc[it] == "op4"){ str = op4(str , stoi(svc[it+1])); }
         else if (svc[it] == "op5"){ str = op5(str, stoi(svc[it+1])); }
-        else if (svc[it] == "op6"){ str = op6(str, stoi(svc[it+1])); }
         else;
     }
     cout << str << endl;

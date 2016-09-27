@@ -1,4 +1,3 @@
-ID	Word
 1	IIIIMPPSSSS
 2	IIIIMPSPSSS
 3	IIIIMPSSPSS
@@ -34650,4 +34649,4 @@ ID	Word
 34649	SSSSPPIMIII
 34650	SSSSPPMIIII
 
-Time took for computing is: 48.2834
+Time took for computing is: 0.275129
