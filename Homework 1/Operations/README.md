@@ -1,16 +1,8 @@
-#String Dictionary
+#Operations
 
-**Problem:** Create a dictionary using all the words that can be created from the letters of "Mississippi".
+**Problem:** Write a program that calculates operation4 - 5 , tetration and hexation :)
 
-**Tips:** Should be in alphabetical order.
+**Extra:** Add op6. Or add multiple entry option.
 
-**Extra:** Make it user interactive so that create the dictionary based on the input.
+**Usage:** Write numbers and operations followed by a "=". For example : 5 op5 5 op5 5 =
 
-Using terminal for finding the city name in the dictionary (or any other words):
-
-        $ g++ stringDictionary.cpp
-        $ ./a.out > nameOfTheTextFile.txt
-        $ grep 'CITY-NAME' nameOfTheTextFile.txt
-
-Here is the example testcase
-![Example](https://github.com/BedirT/MATH-2317_Discrete-Math/blob/master/Homework%201/Mississippi/img.png)

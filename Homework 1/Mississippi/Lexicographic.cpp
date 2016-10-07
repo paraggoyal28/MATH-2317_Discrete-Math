@@ -32,9 +32,22 @@ bool permutate(It begin, It end){
     }
 }
 
+int binSearch(vector<string> array, int l, int h, string key){
+    
+    int mid = (l+h)/2;
+    if(array[mid] == key)
+        return mid;
+    else if(array[mid] > key)
+        return binSearch(array, l, mid-1, key);
+    else if(array[mid] < key)
+        return binSearch(array, mid+1, h, key);
+    else return -1;
+    
+}
 
 int main () {
     string myStr;
+    cout << "Choose a word to create dictionary: ";
     cin >> myStr;
     sort(myStr.begin(), myStr.end());
     // Time computating
@@ -52,6 +65,10 @@ int main () {
     for (vector<string>::iterator it = vc.begin(); it != vc.end(); ++it) {
         cout << count++ << "\t" << *it << endl;
     }
+    cout << endl << "Choose a word to search: ";
+    string searchit;
+    cin >> searchit;
+    cout << binSearch(vc, 0, vc.size(), searchit)+1 << endl;
     
     // Time Printing
     finish = clock();
