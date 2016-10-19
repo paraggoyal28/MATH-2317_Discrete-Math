@@ -1,11 +1,13 @@
 #include <iostream>
 #include <set>
 #include <cmath>
+#include <stdlib.h>
 using namespace std;
 
 int main (){
 
     set<int> rnd;
+    srand(time(NULL));
     while(rnd.size() < 6)
         rnd.insert(rand() % 40 +1);
     
