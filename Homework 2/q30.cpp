@@ -25,12 +25,16 @@ int main (){
     int n, size;
     cout << "Please enter the number of elements.\n";
     cin >> n;
-    cout << "Please enter the elements in the set.\n";
+    //cout << "Please enter the elements in the set.\n";
     int A[n];
-    for(int i = 0; i < n; ++i) cin >> A[i];
-    cout << "Please enter the size that you want...(ie: 3 for 3 element subsets).\n";
-    cin >> size;
+    for(int i = 0; i < n; ++i){
+        A[i] = i+1;
+        //cin >> A[i];
+    } 
+    //cout << "Please enter the size that you want...(ie: 3 for 3 element subsets).\n";
+    //cin >> size;
     list<int> lst;
-    subset(A, n, size, 0, lst);
+    for(int i = 0; i <= n; ++i)
+        subset(A, n, i, 0, lst);
 
 }
